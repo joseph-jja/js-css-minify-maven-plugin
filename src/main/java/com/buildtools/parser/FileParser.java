@@ -1,4 +1,4 @@
-package com.macys.buildtools.parser;
+package com.buildtools.parser;
 
 import java.io.BufferedReader;
 import java.io.File;

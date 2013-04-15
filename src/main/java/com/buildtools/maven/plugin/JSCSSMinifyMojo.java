@@ -1,4 +1,4 @@
-package com.macys.buildtools.maven.plugin;
+package com.buildtools.maven.plugin;
 
 import java.io.BufferedReader;
 import java.io.File;

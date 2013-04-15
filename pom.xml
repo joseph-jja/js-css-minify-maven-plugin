@@ -1,17 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.macys.buildtools</groupId>
-		<artifactId>maven-plugins-parent</artifactId>
-		<version>3.1.0-SNAPSHOT</version>
-	</parent>
-
-	<groupId>com.macys.buildtools.maven.plugin</groupId>
+	<groupId>com.buildtools.maven.plugin</groupId>
 	<artifactId>js-css-minify-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
 	<name>${project.artifactId}</name>
-  <description>Macys Javascript CSS combiner and minifier Maven Plugin</description>
+	<version>3.1.0-SNAPSHOT</version>
+        <description>Macys Javascript CSS combiner and minifier Maven Plugin</description>
+
+
+<properties>
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+       <targetJdkVersion>1.6</targetJdkVersion>
+       <maven.test.skip>true</maven.test.skip>
+  </properties>
+
+  <build>
+    <plugins>
+     <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <target>${targetJdkVersion}</target>
+            <source>${targetJdkVersion}</source>
+            <fork>true</fork>
+          </configuration>
+        </plugin>
+    </plugins>
+  </build>
 
 	<dependencies>
 		<dependency>
